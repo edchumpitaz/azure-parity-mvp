@@ -1,57 +1,65 @@
 name: Azure Parity MVP
 
 on:
-  workflow_dispatch:
-  schedule:
-    - cron: "0 13 * * 1" # Mondays 13:00 UTC
+    workflow_dispatch:
+    schedule:
+        - cron: "0 13 * * 1" # Mondays 13:00 UTC
 
 permissions:
-  id-token: write
-  contents: write
+    id-token: write
+    contents: write
 
 jobs:
-  public-parity:
-    runs-on: ubuntu-latest
+    public-parity:
+        runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
 
-      - name: Azure Login (Public)
-        uses: azure/login@v2
-        with:
-          client-id: ${{ secrets.AZURE_CLIENT_ID }}
-          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+            - name: Azure Login (Public)
+              uses: azure/login@v2
+              with:
+                  client-id: ${{ secrets.AZURE_CLIENT_ID }}
+                  tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+                  subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
-      - name: Set cloud to Azure Public
-        run: az cloud set --name AzureCloud
+            - name: Set cloud to Azure Public
+              run: az cloud set --name AzureCloud
 
-      - name: Collect raw provider JSON (Microsoft.Compute)
-        run: |
-          mkdir -p data/raw/public
-          az provider show --namespace Microsoft.Compute -o json > data/raw/public/Microsoft.Compute.json
+            - name: Collect raw provider JSON (Microsoft.Compute)
+              run: |
+                  mkdir -p data/raw/public
+                  az provider show --namespace Microsoft.Compute -o json > data/raw/public/Microsoft.Compute.json
 
-      - name: Normalize provider JSON
-        run: |
-          mkdir -p data/public
-          python3 scripts/collect_provider_versions.py data/raw/public/Microsoft.Compute.json AzurePublic data/public/Microsoft.Compute.json
+            - name: Normalize provider JSON
+              run: |
+                  mkdir -p data/public
+                  python3 scripts/collect_provider_versions.py data/raw/public/Microsoft.Compute.json AzurePublic data/public/Microsoft.Compute.json
 
-      - name: Diff against Gov (if present)
-        run: |
-          mkdir -p output
-          if [ -f "data/gov/Microsoft.Compute.json" ]; then
-            # Normalize Gov file first (it might be raw provider output)
-            python3 scripts/collect_provider_versions.py data/gov/Microsoft.Compute.json AzureGov data/gov/Microsoft.Compute.normalized.json
-            python3 scripts/diff_provider_versions.py data/public/Microsoft.Compute.json data/gov/Microsoft.Compute.normalized.json output/Microsoft.Compute.parity.json
-          else
-            echo "Gov file not found at data/gov/Microsoft.Compute.json. Skipping diff."
-          fi
+            - name: Diff against Gov (if present)
+              run: |
+                  mkdir -p output
+                  if [ -f "data/gov/Microsoft.Compute.json" ]; then
+                    # Normalize Gov file first (it might be raw provider output)
+                    python3 scripts/collect_provider_versions.py data/gov/Microsoft.Compute.json AzureGov data/gov/Microsoft.Compute.normalized.json
+                    python3 scripts/diff_provider_versions.py data/public/Microsoft.Compute.json data/gov/Microsoft.Compute.normalized.json output/Microsoft.Compute.parity.json
+                  else
+                    echo "Gov file not found at data/gov/Microsoft.Compute.json. Skipping diff."
+                  fi
 
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: parity-output
-          path: |
-            data/public/Microsoft.Compute.json
-            output/Microsoft.Compute.parity.json
+            - name: Generate markdown report (if diff exists)
+              run: |
+                  if [ -f "output/Microsoft.Compute.parity.json" ]; then
+                    python3 scripts/report_parity_md.py output/Microsoft.Compute.parity.json output/Microsoft.Compute.parity.md
+                  else
+                    echo "No parity diff JSON found; skipping markdown report."
+                  fi
+            - name: Upload artifacts
+              uses: actions/upload-artifact@v4
+              with:
+                  name: parity-output
+                  path: |
+                      data/public/Microsoft.Compute.json
+                      output/Microsoft.Compute.parity.json
+                      output/Microsoft.Compute.parity.md
