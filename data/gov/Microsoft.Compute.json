@@ -1,0 +1,2816 @@
+{
+  "authorizations": [
+    {
+      "applicationId": "3366180d-38c0-4e8e-acd4-ce08ab7e4e3d",
+      "roleDefinitionId": "e4770acb-272e-4dc8-87f3-12f44a612224"
+    },
+    {
+      "applicationId": "e34e978f-ba33-426d-83f9-1a35613b3203",
+      "roleDefinitionId": "903ac751-8ad5-4e5a-bfc2-5e49f450a241"
+    },
+    {
+      "applicationId": "f2a40182-061b-4875-acf1-239e47020d92",
+      "roleDefinitionId": "274dd4a6-9687-462d-9bee-4f973b07ce46"
+    },
+    {
+      "applicationId": "fe234dba-804a-4837-bbc5-3f4dee1b60f9",
+      "roleDefinitionId": "ffcd6e5b-8772-457d-bb17-89703c03428f"
+    },
+    {
+      "applicationId": "39fe465e-97b9-4e92-85ae-b5b1164f3192",
+      "roleDefinitionId": "8c99c4ce-d744-4597-a2f0-0a0044d67560"
+    }
+  ],
+  "id": "/subscriptions/141f5e65-57f4-4953-96b3-5174bfbab584/providers/Microsoft.Compute",
+  "namespace": "Microsoft.Compute",
+  "providerAuthorizationConsentState": null,
+  "registrationPolicy": "RegistrationRequired",
+  "registrationState": "Registered",
+  "resourceTypes": [
+    {
+      "aliases": null,
+      "apiProfiles": [
+        {
+          "apiVersion": "2016-03-30",
+          "profileVersion": "2017-03-09-profile"
+        },
+        {
+          "apiVersion": "2017-03-30",
+          "profileVersion": "2018-03-01-hybrid"
+        },
+        {
+          "apiVersion": "2017-12-01",
+          "profileVersion": "2018-06-01-profile"
+        },
+        {
+          "apiVersion": "2017-12-01",
+          "profileVersion": "2019-03-01-hybrid"
+        },
+        {
+          "apiVersion": "2020-06-01",
+          "profileVersion": "2020-09-01-hybrid"
+        }
+      ],
+      "apiVersions": [
+        "2025-04-01",
+        "2024-11-01",
+        "2024-07-01",
+        "2024-03-01",
+        "2023-09-01",
+        "2023-07-01",
+        "2023-03-01",
+        "2022-11-01",
+        "2022-08-01",
+        "2022-03-01",
+        "2021-11-01",
+        "2021-07-01",
+        "2021-04-01",
+        "2021-03-01",
+        "2020-12-01",
+        "2020-06-01",
+        "2019-12-01",
+        "2019-07-01",
+        "2019-03-01",
+        "2018-10-01",
+        "2018-06-01",
+        "2018-04-01",
+        "2017-12-01",
+        "2017-03-30",
+        "2016-08-30",
+        "2016-04-30-preview",
+        "2016-03-30",
+        "2015-06-15",
+        "2015-05-01-preview"
+      ],
+      "capabilities": "CrossResourceGroupResourceMove, CrossSubscriptionResourceMove, SupportsTags, SupportsLocation",
+      "defaultApiVersion": "2023-09-01",
+      "locationMappings": null,
+      "locations": [
+        "USGov Virginia",
+        "USGov Texas",
+        "USGov Arizona"
+      ],
+      "properties": null,
+      "resourceType": "availabilitySets",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": [
+        {
+          "apiVersion": "2016-03-30",
+          "profileVersion": "2017-03-09-profile"
+        },
+        {
+          "apiVersion": "2017-03-30",
+          "profileVersion": "2018-03-01-hybrid"
+        },
+        {
+          "apiVersion": "2017-12-01",
+          "profileVersion": "2018-06-01-profile"
+        },
+        {
+          "apiVersion": "2017-12-01",
+          "profileVersion": "2019-03-01-hybrid"
+        },
+        {
+          "apiVersion": "2020-06-01",
+          "profileVersion": "2020-09-01-hybrid"
+        }
+      ],
+      "apiVersions": [
+        "2025-04-01",
+        "2024-11-01",
+        "2024-07-01",
+        "2024-03-01",
+        "2023-09-01",
+        "2023-07-01",
+        "2023-03-01",
+        "2022-11-01",
+        "2022-08-01",
+        "2022-03-01",
+        "2021-11-01",
+        "2021-07-01",
+        "2021-04-01",
+        "2021-03-01",
+        "2020-12-01",
+        "2020-06-01",
+        "2019-12-01",
+        "2019-07-01",
+        "2019-03-01",
+        "2018-10-01",
+        "2018-06-01",
+        "2018-04-01",
+        "2017-12-01",
+        "2017-03-30",
+        "2016-08-30",
+        "2016-04-30-preview",
+        "2016-03-30",
+        "2015-06-15",
+        "2015-05-01-preview"
+      ],
+      "capabilities": "CrossResourceGroupResourceMove, CrossSubscriptionResourceMove, SystemAssignedResourceIdentity, SupportsTags, SupportsLocation",
+      "defaultApiVersion": "2023-09-01",
+      "locationMappings": null,
+      "locations": [
+        "USGov Virginia",
+        "USGov Texas",
+        "USGov Arizona"
+      ],
+      "properties": null,
+      "resourceType": "virtualMachines",
+      "zoneMappings": [
+        {
+          "location": "USGov Virginia",
+          "zones": [
+            "2",
+            "3",
+            "1"
+          ]
+        }
+      ]
+    },
+    {
+      "aliases": null,
+      "apiProfiles": [
+        {
+          "apiVersion": "2016-03-30",
+          "profileVersion": "2017-03-09-profile"
+        },
+        {
+          "apiVersion": "2017-03-30",
+          "profileVersion": "2018-03-01-hybrid"
+        },
+        {
+          "apiVersion": "2017-12-01",
+          "profileVersion": "2018-06-01-profile"
+        },
+        {
+          "apiVersion": "2017-12-01",
+          "profileVersion": "2019-03-01-hybrid"
+        },
+        {
+          "apiVersion": "2020-06-01",
+          "profileVersion": "2020-09-01-hybrid"
+        }
+      ],
+      "apiVersions": [
+        "2025-04-01",
+        "2024-11-01",
+        "2024-07-01",
+        "2024-03-01",
+        "2023-09-01",
+        "2023-07-01",
+        "2023-03-01",
+        "2022-11-01",
+        "2022-08-01",
+        "2022-03-01",
+        "2021-11-01",
+        "2021-07-01",
+        "2021-04-01",
+        "2021-03-01",
+        "2020-12-01",
+        "2020-06-01",
+        "2019-12-01",
+        "2019-07-01",
+        "2019-03-01",
+        "2018-10-01",
+        "2018-06-01",
+        "2018-04-01",
+        "2017-12-01",
+        "2017-03-30",
+        "2016-08-30",
+        "2016-04-30-preview",
+        "2016-03-30",
+        "2015-06-15",
+        "2015-05-01-preview"
+      ],
+      "capabilities": "CrossResourceGroupResourceMove, CrossSubscriptionResourceMove, SupportsTags, SupportsLocation",
+      "defaultApiVersion": "2023-09-01",
+      "locationMappings": null,
+      "locations": [
+        "USGov Virginia",
+        "USGov Texas",
+        "USGov Arizona"
+      ],
+      "properties": null,
+      "resourceType": "virtualMachines/extensions",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": [
+        {
+          "apiVersion": "2016-03-30",
+          "profileVersion": "2017-03-09-profile"
+        },
+        {
+          "apiVersion": "2017-03-30",
+          "profileVersion": "2018-03-01-hybrid"
+        },
+        {
+          "apiVersion": "2017-12-01",
+          "profileVersion": "2018-06-01-profile"
+        },
+        {
+          "apiVersion": "2017-12-01",
+          "profileVersion": "2019-03-01-hybrid"
+        },
+        {
+          "apiVersion": "2020-06-01",
+          "profileVersion": "2020-09-01-hybrid"
+        }
+      ],
+      "apiVersions": [
+        "2025-04-01",
+        "2024-11-01",
+        "2024-07-01",
+        "2024-03-01",
+        "2023-09-01",
+        "2023-07-01",
+        "2023-03-01",
+        "2022-11-01",
+        "2022-08-01",
+        "2022-03-01",
+        "2021-11-01",
+        "2021-07-01",
+        "2021-04-01",
+        "2021-03-01",
+        "2020-12-01",
+        "2020-06-01",
+        "2019-12-01",
+        "2019-07-01",
+        "2019-03-01",
+        "2018-10-01",
+        "2018-06-01",
+        "2018-04-01",
+        "2017-12-01",
+        "2017-10-30-preview",
+        "2017-03-30",
+        "2016-08-30",
+        "2016-04-30-preview",
+        "2016-03-30",
+        "2015-06-15",
+        "2015-05-01-preview"
+      ],
+      "capabilities": "CrossResourceGroupResourceMove, CrossSubscriptionResourceMove, SystemAssignedResourceIdentity, SupportsTags, SupportsLocation",
+      "defaultApiVersion": "2023-09-01",
+      "locationMappings": null,
+      "locations": [
+        "USGov Virginia",
+        "USGov Texas",
+        "USGov Arizona"
+      ],
+      "properties": null,
+      "resourceType": "virtualMachineScaleSets",
+      "zoneMappings": [
+        {
+          "location": "USGov Virginia",
+          "zones": [
+            "2",
+            "3",
+            "1"
+          ]
+        }
+      ]
+    },
+    {
+      "aliases": null,
+      "apiProfiles": [
+        {
+          "apiVersion": "2016-03-30",
+          "profileVersion": "2017-03-09-profile"
+        },
+        {
+          "apiVersion": "2017-03-30",
+          "profileVersion": "2018-03-01-hybrid"
+        },
+        {
+          "apiVersion": "2017-12-01",
+          "profileVersion": "2018-06-01-profile"
+        },
+        {
+          "apiVersion": "2017-12-01",
+          "profileVersion": "2019-03-01-hybrid"
+        },
+        {
+          "apiVersion": "2020-06-01",
+          "profileVersion": "2020-09-01-hybrid"
+        }
+      ],
+      "apiVersions": [
+        "2025-04-01",
+        "2024-11-01",
+        "2024-07-01",
+        "2024-03-01",
+        "2023-09-01",
+        "2023-07-01",
+        "2023-03-01",
+        "2022-11-01",
+        "2022-08-01",
+        "2022-03-01",
+        "2021-11-01",
+        "2021-07-01",
+        "2021-04-01",
+        "2021-03-01",
+        "2020-12-01",
+        "2020-06-01",
+        "2019-12-01",
+        "2019-07-01",
+        "2019-03-01",
+        "2018-10-01",
+        "2018-06-01",
+        "2018-04-01",
+        "2017-12-01",
+        "2017-10-30-preview",
+        "2017-03-30",
+        "2016-08-30",
+        "2016-04-30-preview",
+        "2016-03-30",
+        "2015-06-15",
+        "2015-05-01-preview"
+      ],
+      "capabilities": "None",
+      "defaultApiVersion": "2015-06-15",
+      "locationMappings": null,
+      "locations": [
+        "USGov Virginia",
+        "USGov Texas",
+        "USGov Arizona"
+      ],
+      "properties": null,
+      "resourceType": "virtualMachineScaleSets/extensions",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": [
+        {
+          "apiVersion": "2016-03-30",
+          "profileVersion": "2017-03-09-profile"
+        },
+        {
+          "apiVersion": "2017-03-30",
+          "profileVersion": "2018-03-01-hybrid"
+        },
+        {
+          "apiVersion": "2017-12-01",
+          "profileVersion": "2018-06-01-profile"
+        },
+        {
+          "apiVersion": "2017-12-01",
+          "profileVersion": "2019-03-01-hybrid"
+        },
+        {
+          "apiVersion": "2020-06-01",
+          "profileVersion": "2020-09-01-hybrid"
+        }
+      ],
+      "apiVersions": [
+        "2025-04-01",
+        "2024-11-01",
+        "2024-07-01",
+        "2024-03-01",
+        "2023-09-01",
+        "2023-07-01",
+        "2023-03-01",
+        "2022-11-01",
+        "2022-08-01",
+        "2022-03-01",
+        "2021-11-01",
+        "2021-07-01",
+        "2021-04-01",
+        "2021-03-01",
+        "2020-12-01",
+        "2020-06-01",
+        "2019-12-01",
+        "2019-07-01",
+        "2019-03-01",
+        "2018-10-01",
+        "2018-06-01",
+        "2018-04-01",
+        "2017-12-01",
+        "2017-10-30-preview",
+        "2017-03-30",
+        "2016-08-30",
+        "2016-04-30-preview",
+        "2016-03-30",
+        "2015-06-15",
+        "2015-05-01-preview"
+      ],
+      "capabilities": "None",
+      "defaultApiVersion": "2023-09-01",
+      "locationMappings": null,
+      "locations": [
+        "USGov Virginia",
+        "USGov Texas",
+        "USGov Arizona"
+      ],
+      "properties": null,
+      "resourceType": "virtualMachineScaleSets/virtualMachines",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": [
+        {
+          "apiVersion": "2016-03-30",
+          "profileVersion": "2017-03-09-profile"
+        },
+        {
+          "apiVersion": "2017-03-30",
+          "profileVersion": "2018-03-01-hybrid"
+        },
+        {
+          "apiVersion": "2017-12-01",
+          "profileVersion": "2018-06-01-profile"
+        },
+        {
+          "apiVersion": "2017-12-01",
+          "profileVersion": "2019-03-01-hybrid"
+        },
+        {
+          "apiVersion": "2020-06-01",
+          "profileVersion": "2020-09-01-hybrid"
+        }
+      ],
+      "apiVersions": [
+        "2025-04-01",
+        "2024-11-01",
+        "2024-07-01",
+        "2024-03-01",
+        "2023-09-01",
+        "2023-07-01",
+        "2023-03-01",
+        "2022-11-01",
+        "2022-08-01",
+        "2022-03-01",
+        "2021-11-01",
+        "2021-07-01",
+        "2021-04-01",
+        "2021-03-01",
+        "2020-12-01",
+        "2020-06-01",
+        "2019-12-01",
+        "2019-07-01",
+        "2019-03-01",
+        "2018-10-01",
+        "2018-06-01",
+        "2018-04-01",
+        "2017-12-01",
+        "2017-10-30-preview",
+        "2017-03-30",
+        "2016-08-30",
+        "2016-04-30-preview",
+        "2016-03-30",
+        "2015-06-15",
+        "2015-05-01-preview"
+      ],
+      "capabilities": "None",
+      "defaultApiVersion": null,
+      "locationMappings": null,
+      "locations": [
+        "USGov Virginia",
+        "USGov Texas",
+        "USGov Arizona"
+      ],
+      "properties": null,
+      "resourceType": "virtualMachineScaleSets/virtualMachines/extensions",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": [
+        {
+          "apiVersion": "2016-03-30",
+          "profileVersion": "2017-03-09-profile"
+        },
+        {
+          "apiVersion": "2017-03-30",
+          "profileVersion": "2018-03-01-hybrid"
+        },
+        {
+          "apiVersion": "2017-12-01",
+          "profileVersion": "2018-06-01-profile"
+        },
+        {
+          "apiVersion": "2017-12-01",
+          "profileVersion": "2019-03-01-hybrid"
+        },
+        {
+          "apiVersion": "2020-06-01",
+          "profileVersion": "2020-09-01-hybrid"
+        }
+      ],
+      "apiVersions": [
+        "2025-04-01",
+        "2024-11-01",
+        "2024-07-01",
+        "2024-03-01",
+        "2023-09-01",
+        "2023-07-01",
+        "2023-03-01",
+        "2022-11-01",
+        "2022-08-01",
+        "2022-03-01",
+        "2021-11-01",
+        "2021-07-01",
+        "2021-04-01",
+        "2021-03-01",
+        "2020-12-01",
+        "2020-06-01",
+        "2019-12-01",
+        "2019-07-01",
+        "2019-03-01",
+        "2018-10-01",
+        "2018-06-01",
+        "2018-04-01",
+        "2017-12-01",
+        "2017-03-30",
+        "2016-09-01",
+        "2016-08-01",
+        "2016-07-01",
+        "2016-06-01",
+        "2016-03-30",
+        "2015-06-15",
+        "2015-05-01-preview"
+      ],
+      "capabilities": "None",
+      "defaultApiVersion": null,
+      "locationMappings": null,
+      "locations": [
+        "USGov Virginia",
+        "USGov Texas",
+        "USGov Arizona"
+      ],
+      "properties": null,
+      "resourceType": "virtualMachineScaleSets/networkInterfaces",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": [
+        {
+          "apiVersion": "2016-03-30",
+          "profileVersion": "2017-03-09-profile"
+        },
+        {
+          "apiVersion": "2017-03-30",
+          "profileVersion": "2018-03-01-hybrid"
+        },
+        {
+          "apiVersion": "2017-12-01",
+          "profileVersion": "2018-06-01-profile"
+        },
+        {
+          "apiVersion": "2017-12-01",
+          "profileVersion": "2019-03-01-hybrid"
+        },
+        {
+          "apiVersion": "2020-06-01",
+          "profileVersion": "2020-09-01-hybrid"
+        }
+      ],
+      "apiVersions": [
+        "2025-04-01",
+        "2024-11-01",
+        "2024-07-01",
+        "2024-03-01",
+        "2023-09-01",
+        "2023-07-01",
+        "2023-03-01",
+        "2022-11-01",
+        "2022-08-01",
+        "2022-03-01",
+        "2021-11-01",
+        "2021-07-01",
+        "2021-04-01",
+        "2021-03-01",
+        "2020-12-01",
+        "2020-06-01",
+        "2019-12-01",
+        "2019-07-01",
+        "2019-03-01",
+        "2018-10-01",
+        "2018-06-01",
+        "2018-04-01",
+        "2017-12-01",
+        "2017-03-30",
+        "2016-09-01",
+        "2016-08-01",
+        "2016-07-01",
+        "2016-06-01",
+        "2016-03-30",
+        "2015-06-15",
+        "2015-05-01-preview"
+      ],
+      "capabilities": "None",
+      "defaultApiVersion": null,
+      "locationMappings": null,
+      "locations": [
+        "USGov Virginia",
+        "USGov Texas",
+        "USGov Arizona"
+      ],
+      "properties": null,
+      "resourceType": "virtualMachineScaleSets/virtualMachines/networkInterfaces",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": [
+        {
+          "apiVersion": "2017-03-30",
+          "profileVersion": "2018-03-01-hybrid"
+        },
+        {
+          "apiVersion": "2017-12-01",
+          "profileVersion": "2018-06-01-profile"
+        },
+        {
+          "apiVersion": "2017-12-01",
+          "profileVersion": "2019-03-01-hybrid"
+        },
+        {
+          "apiVersion": "2020-06-01",
+          "profileVersion": "2020-09-01-hybrid"
+        }
+      ],
+      "apiVersions": [
+        "2025-04-01",
+        "2024-11-01",
+        "2024-07-01",
+        "2024-03-01",
+        "2023-09-01",
+        "2023-07-01",
+        "2023-03-01",
+        "2022-11-01",
+        "2022-08-01",
+        "2022-03-01",
+        "2021-11-01",
+        "2021-07-01",
+        "2021-04-01",
+        "2021-03-01",
+        "2020-12-01",
+        "2020-06-01",
+        "2019-12-01",
+        "2019-07-01",
+        "2019-03-01",
+        "2018-10-01",
+        "2018-06-01",
+        "2018-04-01",
+        "2017-12-01",
+        "2017-03-30"
+      ],
+      "capabilities": "None",
+      "defaultApiVersion": null,
+      "locationMappings": null,
+      "locations": [
+        "USGov Virginia",
+        "USGov Texas",
+        "USGov Arizona"
+      ],
+      "properties": null,
+      "resourceType": "virtualMachineScaleSets/publicIPAddresses",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": null,
+      "apiVersions": [
+        "2025-04-01",
+        "2024-11-01",
+        "2024-07-01",
+        "2024-03-01",
+        "2023-09-01",
+        "2023-07-01",
+        "2023-03-01",
+        "2022-11-01",
+        "2022-08-01",
+        "2022-03-01",
+        "2021-11-01",
+        "2021-07-01",
+        "2021-04-01",
+        "2021-03-01",
+        "2020-12-01",
+        "2020-06-01",
+        "2019-12-01",
+        "2019-07-01",
+        "2019-03-01",
+        "2018-10-01",
+        "2018-06-01",
+        "2018-04-01",
+        "2017-12-01",
+        "2017-03-30",
+        "2016-08-30",
+        "2016-04-30-preview",
+        "2016-03-30",
+        "2015-06-15",
+        "2015-05-01-preview"
+      ],
+      "capabilities": "SupportsExtension",
+      "defaultApiVersion": null,
+      "locationMappings": null,
+      "locations": [],
+      "properties": null,
+      "resourceType": "locations",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": [
+        {
+          "apiVersion": "2016-03-30",
+          "profileVersion": "2017-03-09-profile"
+        },
+        {
+          "apiVersion": "2017-03-30",
+          "profileVersion": "2018-03-01-hybrid"
+        },
+        {
+          "apiVersion": "2017-12-01",
+          "profileVersion": "2018-06-01-profile"
+        },
+        {
+          "apiVersion": "2017-12-01",
+          "profileVersion": "2019-03-01-hybrid"
+        },
+        {
+          "apiVersion": "2020-06-01",
+          "profileVersion": "2020-09-01-hybrid"
+        }
+      ],
+      "apiVersions": [
+        "2025-04-01",
+        "2024-11-01",
+        "2024-07-01",
+        "2024-03-01",
+        "2023-09-01",
+        "2023-07-01",
+        "2023-03-01",
+        "2022-11-01",
+        "2022-08-01",
+        "2022-03-01",
+        "2021-11-01",
+        "2021-07-01",
+        "2021-04-01",
+        "2021-03-01",
+        "2020-12-01",
+        "2020-06-01",
+        "2019-12-01",
+        "2019-07-01",
+        "2019-03-01",
+        "2018-10-01",
+        "2018-06-01",
+        "2018-04-01",
+        "2017-12-01",
+        "2017-10-30-preview",
+        "2017-03-30",
+        "2016-08-30",
+        "2016-04-30-preview",
+        "2016-03-30",
+        "2015-06-15",
+        "2015-05-01-preview"
+      ],
+      "capabilities": "None",
+      "defaultApiVersion": null,
+      "locationMappings": null,
+      "locations": [
+        "USGov Virginia",
+        "USGov Texas",
+        "USGov Arizona"
+      ],
+      "properties": null,
+      "resourceType": "locations/operations",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": [
+        {
+          "apiVersion": "2016-03-30",
+          "profileVersion": "2017-03-09-profile"
+        },
+        {
+          "apiVersion": "2017-03-30",
+          "profileVersion": "2018-03-01-hybrid"
+        },
+        {
+          "apiVersion": "2017-12-01",
+          "profileVersion": "2018-06-01-profile"
+        },
+        {
+          "apiVersion": "2017-12-01",
+          "profileVersion": "2019-03-01-hybrid"
+        },
+        {
+          "apiVersion": "2020-06-01",
+          "profileVersion": "2020-09-01-hybrid"
+        }
+      ],
+      "apiVersions": [
+        "2025-04-01",
+        "2024-11-01",
+        "2024-07-01",
+        "2024-03-01",
+        "2023-09-01",
+        "2023-07-01",
+        "2023-03-01",
+        "2022-11-01",
+        "2022-08-01",
+        "2022-03-01",
+        "2021-11-01",
+        "2021-07-01",
+        "2021-04-01",
+        "2021-03-01",
+        "2020-12-01",
+        "2020-06-01",
+        "2019-12-01",
+        "2019-07-01",
+        "2019-03-01",
+        "2018-10-01",
+        "2018-06-01",
+        "2018-04-01",
+        "2017-12-01",
+        "2017-03-30",
+        "2016-08-30",
+        "2016-04-30-preview",
+        "2016-03-30",
+        "2015-06-15",
+        "2015-05-01-preview"
+      ],
+      "capabilities": "None",
+      "defaultApiVersion": null,
+      "locationMappings": null,
+      "locations": [
+        "USGov Virginia",
+        "USGov Texas",
+        "USGov Arizona"
+      ],
+      "properties": null,
+      "resourceType": "locations/vmSizes",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": [
+        {
+          "apiVersion": "2017-03-30",
+          "profileVersion": "2018-03-01-hybrid"
+        },
+        {
+          "apiVersion": "2017-12-01",
+          "profileVersion": "2018-06-01-profile"
+        },
+        {
+          "apiVersion": "2017-12-01",
+          "profileVersion": "2019-03-01-hybrid"
+        },
+        {
+          "apiVersion": "2020-06-01",
+          "profileVersion": "2020-09-01-hybrid"
+        }
+      ],
+      "apiVersions": [
+        "2025-04-01",
+        "2024-11-01",
+        "2024-07-01",
+        "2024-03-01",
+        "2023-09-01",
+        "2023-07-01",
+        "2023-03-01",
+        "2022-11-01",
+        "2022-08-01",
+        "2022-03-01",
+        "2021-11-01",
+        "2021-07-01",
+        "2021-04-01",
+        "2021-03-01",
+        "2020-12-01",
+        "2020-06-01",
+        "2019-12-01",
+        "2019-07-01",
+        "2019-03-01",
+        "2018-10-01",
+        "2018-06-01",
+        "2018-04-01",
+        "2017-12-01",
+        "2017-03-30"
+      ],
+      "capabilities": "None",
+      "defaultApiVersion": null,
+      "locationMappings": null,
+      "locations": [
+        "USGov Virginia",
+        "USGov Texas",
+        "USGov Arizona"
+      ],
+      "properties": null,
+      "resourceType": "locations/runCommands",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": [
+        {
+          "apiVersion": "2017-03-30",
+          "profileVersion": "2018-03-01-hybrid"
+        },
+        {
+          "apiVersion": "2017-12-01",
+          "profileVersion": "2018-06-01-profile"
+        },
+        {
+          "apiVersion": "2017-12-01",
+          "profileVersion": "2019-03-01-hybrid"
+        },
+        {
+          "apiVersion": "2020-06-01",
+          "profileVersion": "2020-09-01-hybrid"
+        }
+      ],
+      "apiVersions": [
+        "2025-04-01",
+        "2024-11-01",
+        "2024-07-01",
+        "2024-03-01",
+        "2023-09-01",
+        "2023-07-01",
+        "2023-03-01",
+        "2022-11-01",
+        "2022-08-01",
+        "2022-03-01",
+        "2021-11-01",
+        "2021-07-01",
+        "2021-04-01",
+        "2021-03-01",
+        "2020-12-01",
+        "2020-06-01",
+        "2019-12-01",
+        "2019-07-01",
+        "2019-03-01",
+        "2018-10-01",
+        "2018-06-01",
+        "2018-04-01",
+        "2017-12-01",
+        "2017-03-30",
+        "2016-08-30"
+      ],
+      "capabilities": "None",
+      "defaultApiVersion": "2023-09-01",
+      "locationMappings": null,
+      "locations": [
+        "USGov Virginia",
+        "USGov Texas",
+        "USGov Arizona"
+      ],
+      "properties": null,
+      "resourceType": "locations/virtualMachines",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": [
+        {
+          "apiVersion": "2017-03-30",
+          "profileVersion": "2018-03-01-hybrid"
+        },
+        {
+          "apiVersion": "2017-12-01",
+          "profileVersion": "2018-06-01-profile"
+        },
+        {
+          "apiVersion": "2017-12-01",
+          "profileVersion": "2019-03-01-hybrid"
+        },
+        {
+          "apiVersion": "2020-06-01",
+          "profileVersion": "2020-09-01-hybrid"
+        }
+      ],
+      "apiVersions": [
+        "2025-04-01",
+        "2024-11-01",
+        "2024-07-01",
+        "2024-03-01",
+        "2023-09-01",
+        "2023-07-01",
+        "2023-03-01",
+        "2022-11-01",
+        "2022-08-01",
+        "2022-03-01",
+        "2021-11-01",
+        "2021-07-01",
+        "2021-04-01",
+        "2021-03-01",
+        "2020-12-01",
+        "2020-06-01",
+        "2019-12-01",
+        "2019-07-01",
+        "2019-03-01",
+        "2018-10-01",
+        "2018-06-01",
+        "2018-04-01",
+        "2017-12-01",
+        "2017-03-30",
+        "2016-08-30"
+      ],
+      "capabilities": "None",
+      "defaultApiVersion": "2023-09-01",
+      "locationMappings": null,
+      "locations": [
+        "USGov Virginia",
+        "USGov Texas",
+        "USGov Arizona"
+      ],
+      "properties": null,
+      "resourceType": "locations/virtualMachineScaleSets",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": [
+        {
+          "apiVersion": "2016-03-30",
+          "profileVersion": "2017-03-09-profile"
+        },
+        {
+          "apiVersion": "2017-03-30",
+          "profileVersion": "2018-03-01-hybrid"
+        },
+        {
+          "apiVersion": "2017-12-01",
+          "profileVersion": "2018-06-01-profile"
+        },
+        {
+          "apiVersion": "2017-12-01",
+          "profileVersion": "2019-03-01-hybrid"
+        },
+        {
+          "apiVersion": "2020-06-01",
+          "profileVersion": "2020-09-01-hybrid"
+        }
+      ],
+      "apiVersions": [
+        "2025-04-01",
+        "2025-03-03",
+        "2024-11-01",
+        "2024-07-01",
+        "2024-03-03",
+        "2024-03-01",
+        "2023-09-01",
+        "2023-07-03",
+        "2023-07-01",
+        "2023-03-01",
+        "2022-11-01",
+        "2022-08-03",
+        "2022-08-01",
+        "2022-03-03",
+        "2022-03-01",
+        "2022-01-03",
+        "2021-11-01",
+        "2021-07-01",
+        "2021-04-01",
+        "2021-03-01",
+        "2020-12-01",
+        "2020-09-30",
+        "2020-06-01",
+        "2019-12-01",
+        "2019-07-01",
+        "2019-03-01",
+        "2018-10-01",
+        "2018-06-01",
+        "2018-04-01",
+        "2017-12-01",
+        "2017-03-30",
+        "2016-08-30",
+        "2016-04-30-preview",
+        "2016-03-30",
+        "2015-06-15",
+        "2015-05-01-preview"
+      ],
+      "capabilities": "None",
+      "defaultApiVersion": null,
+      "locationMappings": null,
+      "locations": [
+        "USGov Virginia",
+        "USGov Texas",
+        "USGov Arizona"
+      ],
+      "properties": null,
+      "resourceType": "locations/publishers",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": null,
+      "apiVersions": [
+        "2025-04-01",
+        "2024-11-01",
+        "2024-07-01",
+        "2024-03-01",
+        "2023-09-01",
+        "2023-07-01",
+        "2023-03-01",
+        "2022-11-01",
+        "2022-08-01",
+        "2022-03-01",
+        "2021-11-01",
+        "2021-07-01",
+        "2021-04-01",
+        "2021-03-01",
+        "2020-12-01",
+        "2020-06-01",
+        "2019-12-01",
+        "2019-07-01",
+        "2019-03-01",
+        "2018-10-01",
+        "2018-06-01",
+        "2018-04-01",
+        "2017-12-01",
+        "2017-03-30",
+        "2016-08-30",
+        "2016-03-30",
+        "2015-06-15",
+        "2015-05-01-preview"
+      ],
+      "capabilities": "None",
+      "defaultApiVersion": null,
+      "locationMappings": null,
+      "locations": [
+        "USGov Virginia",
+        "USGov Texas",
+        "USGov Arizona"
+      ],
+      "properties": null,
+      "resourceType": "operations",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": null,
+      "apiVersions": [
+        "2025-04-01",
+        "2024-11-01",
+        "2024-07-01",
+        "2024-03-01",
+        "2023-09-01",
+        "2023-07-01",
+        "2023-03-01",
+        "2022-11-01",
+        "2022-08-01",
+        "2022-03-01",
+        "2021-11-01",
+        "2021-07-01",
+        "2021-04-01",
+        "2021-03-01",
+        "2020-12-01",
+        "2020-06-01",
+        "2019-12-01"
+      ],
+      "capabilities": "CrossResourceGroupResourceMove, CrossSubscriptionResourceMove, SupportsTags, SupportsLocation",
+      "defaultApiVersion": "2023-09-01",
+      "locationMappings": null,
+      "locations": [
+        "USGov Virginia",
+        "USGov Texas",
+        "USGov Arizona"
+      ],
+      "properties": null,
+      "resourceType": "virtualMachines/runCommands",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": null,
+      "apiVersions": [
+        "2025-04-01",
+        "2024-11-01",
+        "2024-07-01",
+        "2024-03-01",
+        "2023-09-01",
+        "2023-07-01",
+        "2023-03-01",
+        "2022-11-01",
+        "2022-08-01",
+        "2022-03-01",
+        "2021-11-01",
+        "2021-07-01"
+      ],
+      "capabilities": "None",
+      "defaultApiVersion": "2023-09-01",
+      "locationMappings": null,
+      "locations": [
+        "USGov Virginia",
+        "USGov Texas",
+        "USGov Arizona"
+      ],
+      "properties": null,
+      "resourceType": "virtualMachineScaleSets/applications",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": null,
+      "apiVersions": [
+        "2025-04-01",
+        "2024-11-01",
+        "2024-07-01",
+        "2024-03-01",
+        "2023-09-01",
+        "2023-07-01",
+        "2023-03-01",
+        "2022-11-01",
+        "2022-08-01",
+        "2022-03-01",
+        "2021-11-01",
+        "2021-07-01"
+      ],
+      "capabilities": "SupportsTags, SupportsLocation",
+      "defaultApiVersion": "2023-09-01",
+      "locationMappings": null,
+      "locations": [
+        "USGov Virginia",
+        "USGov Texas",
+        "USGov Arizona"
+      ],
+      "properties": null,
+      "resourceType": "virtualMachines/VMApplications",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": null,
+      "apiVersions": [
+        "2025-04-01",
+        "2024-11-01",
+        "2024-07-01",
+        "2024-03-01",
+        "2023-09-01",
+        "2023-07-01",
+        "2023-03-01",
+        "2022-11-01",
+        "2022-08-01",
+        "2022-03-01",
+        "2021-11-01",
+        "2021-07-01",
+        "2021-04-01",
+        "2021-03-01",
+        "2020-12-01",
+        "2020-06-01",
+        "2019-12-01",
+        "2019-07-01",
+        "2019-03-01",
+        "2018-10-01",
+        "2018-06-01",
+        "2018-04-01",
+        "2017-12-01",
+        "2017-03-30"
+      ],
+      "capabilities": "SupportsTags, SupportsLocation",
+      "defaultApiVersion": "2023-09-01",
+      "locationMappings": null,
+      "locations": [
+        "USGov Texas",
+        "USGov Arizona",
+        "USGov Virginia"
+      ],
+      "properties": null,
+      "resourceType": "restorePointCollections",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": null,
+      "apiVersions": [
+        "2025-04-01",
+        "2024-11-01",
+        "2024-07-01",
+        "2024-03-01",
+        "2023-09-01",
+        "2023-07-01",
+        "2023-03-01",
+        "2022-11-01",
+        "2022-08-01",
+        "2022-03-01",
+        "2021-11-01",
+        "2021-07-01",
+        "2021-04-01",
+        "2021-03-01",
+        "2020-12-01",
+        "2020-06-01",
+        "2019-12-01",
+        "2019-07-01",
+        "2019-03-01",
+        "2018-10-01",
+        "2018-06-01",
+        "2018-04-01",
+        "2017-12-01",
+        "2017-03-30"
+      ],
+      "capabilities": "None",
+      "defaultApiVersion": null,
+      "locationMappings": null,
+      "locations": [
+        "USGov Texas",
+        "USGov Arizona",
+        "USGov Virginia"
+      ],
+      "properties": null,
+      "resourceType": "restorePointCollections/restorePoints",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": null,
+      "apiVersions": [
+        "2025-04-01",
+        "2024-11-01",
+        "2024-07-01",
+        "2024-03-01",
+        "2023-09-01",
+        "2023-07-01",
+        "2023-03-01",
+        "2022-11-01",
+        "2022-08-01",
+        "2022-03-01",
+        "2021-11-01",
+        "2021-07-01",
+        "2021-04-01",
+        "2021-03-01",
+        "2020-12-01",
+        "2020-06-01",
+        "2019-12-01",
+        "2019-07-01",
+        "2019-03-01",
+        "2018-10-01",
+        "2018-06-01",
+        "2018-04-01"
+      ],
+      "capabilities": "CrossResourceGroupResourceMove, CrossSubscriptionResourceMove, SupportsTags, SupportsLocation",
+      "defaultApiVersion": "2023-09-01",
+      "locationMappings": null,
+      "locations": [
+        "USGov Virginia",
+        "USGov Texas",
+        "USGov Arizona"
+      ],
+      "properties": null,
+      "resourceType": "proximityPlacementGroups",
+      "zoneMappings": [
+        {
+          "location": "USGov Virginia",
+          "zones": [
+            "2",
+            "3",
+            "1"
+          ]
+        }
+      ]
+    },
+    {
+      "aliases": null,
+      "apiProfiles": null,
+      "apiVersions": [
+        "2025-04-01",
+        "2024-11-01",
+        "2024-07-01",
+        "2024-03-01",
+        "2023-09-01",
+        "2023-07-01",
+        "2023-03-01",
+        "2022-11-01",
+        "2022-08-01",
+        "2022-03-01",
+        "2021-11-01",
+        "2021-07-01",
+        "2021-04-01",
+        "2021-03-01",
+        "2020-12-01",
+        "2020-06-01",
+        "2019-12-01"
+      ],
+      "capabilities": "SupportsTags, SupportsLocation",
+      "defaultApiVersion": "2023-09-01",
+      "locationMappings": null,
+      "locations": [
+        "USGov Virginia",
+        "USGov Texas",
+        "USGov Arizona"
+      ],
+      "properties": null,
+      "resourceType": "sshPublicKeys",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": null,
+      "apiVersions": [
+        "2025-04-01",
+        "2024-11-01",
+        "2024-07-01",
+        "2024-03-01",
+        "2023-09-01",
+        "2023-07-01",
+        "2023-03-01",
+        "2022-11-01",
+        "2022-08-01",
+        "2022-03-01",
+        "2021-11-01",
+        "2021-07-01",
+        "2021-04-01",
+        "2021-03-01",
+        "2020-12-01",
+        "2020-06-01"
+      ],
+      "capabilities": "SupportsTags, SupportsLocation",
+      "defaultApiVersion": "2023-09-01",
+      "locationMappings": null,
+      "locations": [
+        "USGov Virginia",
+        "USGov Texas",
+        "USGov Arizona"
+      ],
+      "properties": null,
+      "resourceType": "capacityReservationGroups",
+      "zoneMappings": [
+        {
+          "location": "USGov Virginia",
+          "zones": [
+            "2",
+            "3",
+            "1"
+          ]
+        }
+      ]
+    },
+    {
+      "aliases": null,
+      "apiProfiles": null,
+      "apiVersions": [
+        "2025-04-01",
+        "2024-11-01",
+        "2024-07-01",
+        "2024-03-01",
+        "2023-09-01",
+        "2023-07-01",
+        "2023-03-01",
+        "2022-11-01",
+        "2022-08-01",
+        "2022-03-01",
+        "2021-11-01",
+        "2021-07-01",
+        "2021-04-01",
+        "2021-03-01",
+        "2020-12-01",
+        "2020-06-01"
+      ],
+      "capabilities": "SupportsTags, SupportsLocation",
+      "defaultApiVersion": "2023-09-01",
+      "locationMappings": null,
+      "locations": [
+        "USGov Virginia",
+        "USGov Texas",
+        "USGov Arizona"
+      ],
+      "properties": null,
+      "resourceType": "capacityReservationGroups/capacityReservations",
+      "zoneMappings": [
+        {
+          "location": "USGov Virginia",
+          "zones": [
+            "2",
+            "3",
+            "1"
+          ]
+        }
+      ]
+    },
+    {
+      "aliases": null,
+      "apiProfiles": null,
+      "apiVersions": [
+        "2025-04-01",
+        "2024-11-01",
+        "2024-07-01",
+        "2024-03-01",
+        "2023-09-01",
+        "2023-07-01",
+        "2023-03-01",
+        "2022-11-01",
+        "2022-08-01",
+        "2022-03-01",
+        "2021-11-01",
+        "2021-07-01",
+        "2021-04-01",
+        "2021-03-01",
+        "2020-12-01",
+        "2020-06-01"
+      ],
+      "capabilities": "None",
+      "defaultApiVersion": "2023-09-01",
+      "locationMappings": null,
+      "locations": [
+        "USGov Virginia",
+        "USGov Texas",
+        "USGov Arizona"
+      ],
+      "properties": null,
+      "resourceType": "locations/spotEvictionRates",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": null,
+      "apiVersions": [
+        "2025-04-01",
+        "2024-11-01",
+        "2024-07-01",
+        "2024-03-01",
+        "2023-09-01",
+        "2023-07-01",
+        "2023-03-01",
+        "2022-11-01",
+        "2022-08-01",
+        "2022-03-01",
+        "2021-11-01",
+        "2021-07-01",
+        "2021-04-01",
+        "2021-03-01",
+        "2020-12-01",
+        "2020-06-01"
+      ],
+      "capabilities": "None",
+      "defaultApiVersion": "2023-09-01",
+      "locationMappings": null,
+      "locations": [
+        "USGov Virginia",
+        "USGov Texas",
+        "USGov Arizona"
+      ],
+      "properties": null,
+      "resourceType": "locations/spotPriceHistory",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": null,
+      "apiVersions": [
+        "2025-04-01",
+        "2024-11-01",
+        "2024-07-01",
+        "2024-03-01",
+        "2023-09-01",
+        "2023-07-01",
+        "2023-03-01",
+        "2022-11-01",
+        "2022-08-01",
+        "2022-03-01",
+        "2021-11-01",
+        "2021-07-01"
+      ],
+      "capabilities": "None",
+      "defaultApiVersion": "2023-09-01",
+      "locationMappings": null,
+      "locations": [
+        "USGov Virginia",
+        "USGov Texas",
+        "USGov Arizona"
+      ],
+      "properties": null,
+      "resourceType": "locations/recommendations",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": [
+        {
+          "apiVersion": "2016-03-30",
+          "profileVersion": "2017-03-09-profile"
+        },
+        {
+          "apiVersion": "2017-03-30",
+          "profileVersion": "2018-03-01-hybrid"
+        },
+        {
+          "apiVersion": "2017-12-01",
+          "profileVersion": "2018-06-01-profile"
+        },
+        {
+          "apiVersion": "2017-12-01",
+          "profileVersion": "2019-03-01-hybrid"
+        },
+        {
+          "apiVersion": "2020-06-01",
+          "profileVersion": "2020-09-01-hybrid"
+        }
+      ],
+      "apiVersions": [
+        "2025-04-01",
+        "2025-03-03",
+        "2024-11-01",
+        "2024-07-01",
+        "2024-03-03",
+        "2024-03-01",
+        "2023-09-01",
+        "2023-07-03",
+        "2023-07-01",
+        "2023-03-01",
+        "2022-11-01",
+        "2022-08-03",
+        "2022-08-01",
+        "2022-03-03",
+        "2022-03-01",
+        "2022-01-03",
+        "2021-11-01",
+        "2021-07-01",
+        "2021-04-01",
+        "2021-03-01",
+        "2020-12-01",
+        "2020-09-30",
+        "2020-06-01",
+        "2019-12-01",
+        "2019-07-01",
+        "2019-03-01",
+        "2018-10-01",
+        "2018-06-01",
+        "2018-04-01",
+        "2017-12-01",
+        "2017-03-30",
+        "2016-08-30",
+        "2016-04-30-preview",
+        "2016-03-30",
+        "2015-06-15",
+        "2015-05-01-preview"
+      ],
+      "capabilities": "None",
+      "defaultApiVersion": null,
+      "locationMappings": null,
+      "locations": [
+        "USGov Virginia",
+        "USGov Texas",
+        "USGov Arizona"
+      ],
+      "properties": null,
+      "resourceType": "locations/sharedGalleries",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": [
+        {
+          "apiVersion": "2016-03-30",
+          "profileVersion": "2017-03-09-profile"
+        },
+        {
+          "apiVersion": "2017-03-30",
+          "profileVersion": "2018-03-01-hybrid"
+        },
+        {
+          "apiVersion": "2017-12-01",
+          "profileVersion": "2018-06-01-profile"
+        },
+        {
+          "apiVersion": "2017-12-01",
+          "profileVersion": "2019-03-01-hybrid"
+        },
+        {
+          "apiVersion": "2020-06-01",
+          "profileVersion": "2020-09-01-hybrid"
+        }
+      ],
+      "apiVersions": [
+        "2025-04-01",
+        "2025-03-03",
+        "2024-11-01",
+        "2024-07-01",
+        "2024-03-03",
+        "2024-03-01",
+        "2023-09-01",
+        "2023-07-03",
+        "2023-07-01",
+        "2023-03-01",
+        "2022-11-01",
+        "2022-08-03",
+        "2022-08-01",
+        "2022-03-03",
+        "2022-03-01",
+        "2022-01-03",
+        "2021-11-01",
+        "2021-07-01",
+        "2021-04-01",
+        "2021-03-01",
+        "2020-12-01",
+        "2020-09-30",
+        "2020-06-01",
+        "2019-12-01",
+        "2019-07-01",
+        "2019-03-01",
+        "2018-10-01",
+        "2018-06-01",
+        "2018-04-01",
+        "2017-12-01",
+        "2017-03-30",
+        "2016-08-30",
+        "2016-04-30-preview",
+        "2016-03-30",
+        "2015-06-15",
+        "2015-05-01-preview"
+      ],
+      "capabilities": "None",
+      "defaultApiVersion": null,
+      "locationMappings": null,
+      "locations": [
+        "USGov Virginia",
+        "USGov Texas",
+        "USGov Arizona"
+      ],
+      "properties": null,
+      "resourceType": "locations/communityGalleries",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": null,
+      "apiVersions": [
+        "2017-10-15-preview"
+      ],
+      "capabilities": "SupportsTags, SupportsLocation",
+      "defaultApiVersion": "2017-10-15-preview",
+      "locationMappings": null,
+      "locations": [
+        "USGov Texas"
+      ],
+      "properties": null,
+      "resourceType": "sharedVMImages",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": null,
+      "apiVersions": [
+        "2017-10-15-preview"
+      ],
+      "capabilities": "SupportsTags, SupportsLocation",
+      "defaultApiVersion": "2017-10-15-preview",
+      "locationMappings": null,
+      "locations": [
+        "USGov Texas"
+      ],
+      "properties": null,
+      "resourceType": "sharedVMImages/versions",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": null,
+      "apiVersions": [
+        "2017-10-15-preview"
+      ],
+      "capabilities": "None",
+      "defaultApiVersion": null,
+      "locationMappings": null,
+      "locations": [
+        "USGov Texas"
+      ],
+      "properties": null,
+      "resourceType": "locations/artifactPublishers",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": null,
+      "apiVersions": [
+        "2025-03-03",
+        "2024-03-03",
+        "2023-07-03",
+        "2022-08-03",
+        "2022-03-03",
+        "2022-01-03",
+        "2021-10-01",
+        "2021-07-01",
+        "2021-03-01",
+        "2020-09-30",
+        "2019-12-01",
+        "2019-07-01",
+        "2019-03-01",
+        "2018-06-01",
+        "2017-10-15-preview"
+      ],
+      "capabilities": "None",
+      "defaultApiVersion": null,
+      "locationMappings": null,
+      "locations": [
+        "USGov Texas",
+        "USGov Virginia",
+        "USGov Arizona"
+      ],
+      "properties": null,
+      "resourceType": "locations/capsoperations",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": null,
+      "apiVersions": [
+        "2025-03-03",
+        "2024-03-03",
+        "2023-07-03",
+        "2022-08-03",
+        "2022-03-03",
+        "2022-01-03",
+        "2021-10-01",
+        "2021-07-01",
+        "2021-03-01",
+        "2020-09-30",
+        "2019-12-01",
+        "2019-07-01",
+        "2019-03-01",
+        "2018-06-01"
+      ],
+      "capabilities": "SystemAssignedResourceIdentity, SupportsTags, SupportsLocation",
+      "defaultApiVersion": "2023-07-03",
+      "locationMappings": null,
+      "locations": [
+        "USGov Texas",
+        "USGov Virginia",
+        "USGov Arizona"
+      ],
+      "properties": null,
+      "resourceType": "galleries",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": null,
+      "apiVersions": [
+        "2025-03-03",
+        "2024-03-03",
+        "2023-07-03",
+        "2022-08-03",
+        "2022-03-03",
+        "2022-01-03",
+        "2021-10-01",
+        "2021-07-01",
+        "2021-03-01",
+        "2020-09-30",
+        "2019-12-01",
+        "2019-07-01",
+        "2019-03-01",
+        "2018-06-01"
+      ],
+      "capabilities": "SupportsTags, SupportsLocation",
+      "defaultApiVersion": "2022-03-03",
+      "locationMappings": null,
+      "locations": [
+        "USGov Texas",
+        "USGov Virginia",
+        "USGov Arizona"
+      ],
+      "properties": null,
+      "resourceType": "galleries/images",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": null,
+      "apiVersions": [
+        "2025-03-03",
+        "2024-03-03",
+        "2023-07-03",
+        "2022-08-03",
+        "2022-03-03",
+        "2022-01-03",
+        "2021-10-01",
+        "2021-07-01",
+        "2021-03-01",
+        "2020-09-30",
+        "2019-12-01",
+        "2019-07-01",
+        "2019-03-01",
+        "2018-06-01"
+      ],
+      "capabilities": "SupportsTags, SupportsLocation",
+      "defaultApiVersion": "2022-03-03",
+      "locationMappings": null,
+      "locations": [
+        "USGov Texas",
+        "USGov Virginia",
+        "USGov Arizona"
+      ],
+      "properties": null,
+      "resourceType": "galleries/images/versions",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": null,
+      "apiVersions": [
+        "2025-03-03",
+        "2024-03-03",
+        "2023-07-03",
+        "2022-08-03",
+        "2022-03-03",
+        "2022-01-03",
+        "2021-10-01",
+        "2021-07-01",
+        "2021-03-01",
+        "2020-09-30",
+        "2019-12-01",
+        "2019-07-01",
+        "2019-03-01",
+        "2018-06-01"
+      ],
+      "capabilities": "None",
+      "defaultApiVersion": "2022-03-03",
+      "locationMappings": null,
+      "locations": [
+        "USGov Texas",
+        "USGov Virginia",
+        "USGov Arizona"
+      ],
+      "properties": null,
+      "resourceType": "locations/galleries",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": null,
+      "apiVersions": [
+        "2025-03-03",
+        "2024-03-03",
+        "2023-07-03",
+        "2022-08-03",
+        "2022-03-03",
+        "2022-01-03",
+        "2021-10-01",
+        "2021-07-01",
+        "2021-03-01",
+        "2020-09-30",
+        "2019-12-01",
+        "2019-07-01",
+        "2019-03-01"
+      ],
+      "capabilities": "SupportsTags, SupportsLocation",
+      "defaultApiVersion": "2022-03-03",
+      "locationMappings": null,
+      "locations": [
+        "USGov Texas",
+        "USGov Virginia",
+        "USGov Arizona"
+      ],
+      "properties": null,
+      "resourceType": "galleries/applications",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": null,
+      "apiVersions": [
+        "2025-03-03",
+        "2024-03-03",
+        "2023-07-03",
+        "2022-08-03",
+        "2022-03-03",
+        "2022-01-03",
+        "2021-10-01",
+        "2021-07-01",
+        "2021-03-01",
+        "2020-09-30",
+        "2019-12-01",
+        "2019-07-01",
+        "2019-03-01"
+      ],
+      "capabilities": "SupportsTags, SupportsLocation",
+      "defaultApiVersion": "2022-03-03",
+      "locationMappings": null,
+      "locations": [
+        "USGov Texas",
+        "USGov Virginia",
+        "USGov Arizona"
+      ],
+      "properties": null,
+      "resourceType": "galleries/applications/versions",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": null,
+      "apiVersions": [
+        "2025-03-03",
+        "2024-03-03"
+      ],
+      "capabilities": "SupportsTags, SupportsLocation",
+      "defaultApiVersion": "2024-03-03",
+      "locationMappings": null,
+      "locations": [
+        "USGov Texas",
+        "USGov Virginia",
+        "USGov Arizona"
+      ],
+      "properties": null,
+      "resourceType": "galleries/inVMAccessControlProfiles",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": null,
+      "apiVersions": [
+        "2025-03-03",
+        "2024-03-03"
+      ],
+      "capabilities": "SupportsTags, SupportsLocation",
+      "defaultApiVersion": "2024-03-03",
+      "locationMappings": null,
+      "locations": [
+        "USGov Texas",
+        "USGov Virginia",
+        "USGov Arizona"
+      ],
+      "properties": null,
+      "resourceType": "galleries/inVMAccessControlProfiles/versions",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": [
+        {
+          "apiVersion": "2017-03-30",
+          "profileVersion": "2018-03-01-hybrid"
+        },
+        {
+          "apiVersion": "2018-04-01",
+          "profileVersion": "2018-06-01-profile"
+        }
+      ],
+      "apiVersions": [
+        "2025-01-02",
+        "2024-03-02",
+        "2023-10-02",
+        "2023-04-02",
+        "2023-01-02",
+        "2022-07-02",
+        "2022-03-02",
+        "2021-12-01",
+        "2021-08-01",
+        "2021-04-01",
+        "2020-12-01",
+        "2020-09-30",
+        "2020-06-30",
+        "2020-05-01",
+        "2019-11-01",
+        "2019-07-01",
+        "2019-03-01",
+        "2018-09-30",
+        "2018-06-01",
+        "2018-04-01",
+        "2017-03-30",
+        "2016-04-30-preview"
+      ],
+      "capabilities": "CrossResourceGroupResourceMove, CrossSubscriptionResourceMove, SupportsTags, SupportsLocation",
+      "defaultApiVersion": "2022-03-02",
+      "locationMappings": null,
+      "locations": [
+        "USGov Texas",
+        "USGov Arizona",
+        "USGov Virginia"
+      ],
+      "properties": null,
+      "resourceType": "disks",
+      "zoneMappings": [
+        {
+          "location": "USGov Virginia",
+          "zones": [
+            "2",
+            "3",
+            "1"
+          ]
+        }
+      ]
+    },
+    {
+      "aliases": null,
+      "apiProfiles": [
+        {
+          "apiVersion": "2017-03-30",
+          "profileVersion": "2018-03-01-hybrid"
+        },
+        {
+          "apiVersion": "2018-04-01",
+          "profileVersion": "2018-06-01-profile"
+        }
+      ],
+      "apiVersions": [
+        "2025-01-02",
+        "2024-03-02",
+        "2023-10-02",
+        "2023-04-02",
+        "2023-01-02",
+        "2022-07-02",
+        "2022-03-02",
+        "2021-12-01",
+        "2021-08-01",
+        "2021-04-01",
+        "2020-12-01",
+        "2020-09-30",
+        "2020-06-30",
+        "2020-05-01",
+        "2019-11-01",
+        "2019-07-01",
+        "2019-03-01",
+        "2018-09-30",
+        "2018-06-01",
+        "2018-04-01",
+        "2017-03-30",
+        "2016-04-30-preview"
+      ],
+      "capabilities": "CrossResourceGroupResourceMove, CrossSubscriptionResourceMove, SupportsTags, SupportsLocation",
+      "defaultApiVersion": "2022-03-02",
+      "locationMappings": null,
+      "locations": [
+        "USGov Texas",
+        "USGov Arizona",
+        "USGov Virginia"
+      ],
+      "properties": null,
+      "resourceType": "snapshots",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": [
+        {
+          "apiVersion": "2017-03-30",
+          "profileVersion": "2018-03-01-hybrid"
+        },
+        {
+          "apiVersion": "2018-04-01",
+          "profileVersion": "2018-06-01-profile"
+        }
+      ],
+      "apiVersions": [
+        "2025-01-02",
+        "2024-03-02",
+        "2023-10-02",
+        "2023-04-02",
+        "2023-01-02",
+        "2022-07-02",
+        "2022-03-02",
+        "2021-12-01",
+        "2021-08-01",
+        "2021-04-01",
+        "2020-12-01",
+        "2020-09-30",
+        "2020-06-30",
+        "2020-05-01",
+        "2019-11-01",
+        "2019-07-01",
+        "2019-03-01",
+        "2018-09-30",
+        "2018-06-01",
+        "2018-04-01",
+        "2017-03-30",
+        "2016-04-30-preview"
+      ],
+      "capabilities": "None",
+      "defaultApiVersion": null,
+      "locationMappings": null,
+      "locations": [
+        "USGov Texas",
+        "USGov Arizona",
+        "USGov Virginia"
+      ],
+      "properties": null,
+      "resourceType": "locations/diskoperations",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": null,
+      "apiVersions": [
+        "2025-01-02",
+        "2024-03-02",
+        "2023-10-02",
+        "2023-04-02",
+        "2023-01-02",
+        "2022-07-02",
+        "2022-03-02",
+        "2021-12-01",
+        "2021-08-01",
+        "2021-04-01",
+        "2020-12-01",
+        "2020-09-30",
+        "2020-06-30",
+        "2020-05-01",
+        "2019-11-01",
+        "2019-07-01"
+      ],
+      "capabilities": "SystemAssignedResourceIdentity, SupportsTags, SupportsLocation",
+      "defaultApiVersion": "2022-03-02",
+      "locationMappings": null,
+      "locations": [
+        "USGov Texas",
+        "USGov Arizona",
+        "USGov Virginia"
+      ],
+      "properties": null,
+      "resourceType": "diskEncryptionSets",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": null,
+      "apiVersions": [
+        "2025-01-02",
+        "2024-03-02",
+        "2023-10-02",
+        "2023-04-02",
+        "2023-01-02",
+        "2022-07-02",
+        "2022-03-02",
+        "2021-12-01",
+        "2021-08-01",
+        "2021-04-01",
+        "2020-12-01",
+        "2020-09-30",
+        "2020-06-30",
+        "2020-05-01"
+      ],
+      "capabilities": "SupportsTags, SupportsLocation",
+      "defaultApiVersion": "2022-03-02",
+      "locationMappings": null,
+      "locations": [
+        "USGov Texas",
+        "USGov Arizona",
+        "USGov Virginia"
+      ],
+      "properties": null,
+      "resourceType": "diskAccesses",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": null,
+      "apiVersions": [
+        "2025-01-02",
+        "2024-03-02",
+        "2023-10-02",
+        "2023-04-02",
+        "2023-01-02",
+        "2022-07-02",
+        "2022-03-02",
+        "2021-12-01",
+        "2021-08-01",
+        "2021-04-01",
+        "2020-12-01",
+        "2020-09-30"
+      ],
+      "capabilities": "None",
+      "defaultApiVersion": "2022-03-02",
+      "locationMappings": null,
+      "locations": [
+        "USGov Texas",
+        "USGov Arizona",
+        "USGov Virginia"
+      ],
+      "properties": null,
+      "resourceType": "restorePointCollections/restorePoints/diskRestorePoints",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": [
+        {
+          "apiVersion": "2017-03-30",
+          "profileVersion": "2018-03-01-hybrid"
+        },
+        {
+          "apiVersion": "2018-04-01",
+          "profileVersion": "2018-06-01-profile"
+        }
+      ],
+      "apiVersions": [
+        "2025-01-02",
+        "2024-03-02",
+        "2023-10-02",
+        "2023-04-02",
+        "2023-01-02",
+        "2022-07-02",
+        "2022-03-02",
+        "2021-12-01",
+        "2021-08-01",
+        "2021-04-01",
+        "2020-12-01",
+        "2020-09-30",
+        "2020-06-30",
+        "2020-05-01",
+        "2019-11-01",
+        "2019-07-01",
+        "2019-03-01",
+        "2018-09-30",
+        "2018-06-01",
+        "2018-04-01",
+        "2017-03-30",
+        "2016-04-30-preview"
+      ],
+      "capabilities": "None",
+      "defaultApiVersion": "2022-03-02",
+      "locationMappings": null,
+      "locations": [
+        "USGov Virginia",
+        "USGov Texas",
+        "USGov Arizona"
+      ],
+      "properties": null,
+      "resourceType": "virtualMachineScaleSets/disks",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": null,
+      "apiVersions": [
+        "2024-11-04",
+        "2022-09-04",
+        "2022-04-04",
+        "2021-03-01",
+        "2020-10-01-preview"
+      ],
+      "capabilities": "CrossResourceGroupResourceMove, CrossSubscriptionResourceMove, SupportsTags, SupportsLocation",
+      "defaultApiVersion": "2021-03-01",
+      "locationMappings": null,
+      "locations": [
+        "USGov Texas",
+        "USGov Arizona",
+        "USGov Virginia"
+      ],
+      "properties": null,
+      "resourceType": "cloudServices",
+      "zoneMappings": [
+        {
+          "location": "USGov Virginia",
+          "zones": [
+            "2",
+            "3",
+            "1"
+          ]
+        }
+      ]
+    },
+    {
+      "aliases": null,
+      "apiProfiles": null,
+      "apiVersions": [
+        "2024-11-04",
+        "2022-09-04",
+        "2022-04-04",
+        "2021-03-01",
+        "2020-10-01-preview"
+      ],
+      "capabilities": "None",
+      "defaultApiVersion": "2021-03-01",
+      "locationMappings": null,
+      "locations": [
+        "USGov Texas",
+        "USGov Arizona",
+        "USGov Virginia"
+      ],
+      "properties": null,
+      "resourceType": "cloudServices/roles",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": null,
+      "apiVersions": [
+        "2024-11-04",
+        "2022-09-04",
+        "2022-04-04",
+        "2021-03-01",
+        "2020-10-01-preview"
+      ],
+      "capabilities": "None",
+      "defaultApiVersion": "2021-03-01",
+      "locationMappings": null,
+      "locations": [
+        "USGov Texas",
+        "USGov Arizona",
+        "USGov Virginia"
+      ],
+      "properties": null,
+      "resourceType": "cloudServices/roleInstances",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": null,
+      "apiVersions": [
+        "2024-11-04",
+        "2022-09-04",
+        "2022-04-04",
+        "2021-03-01",
+        "2020-10-01-preview"
+      ],
+      "capabilities": "None",
+      "defaultApiVersion": null,
+      "locationMappings": null,
+      "locations": [
+        "USGov Texas",
+        "USGov Arizona",
+        "USGov Virginia"
+      ],
+      "properties": null,
+      "resourceType": "locations/csoperations",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": null,
+      "apiVersions": [
+        "2024-11-04",
+        "2022-09-04",
+        "2022-04-04",
+        "2021-03-01"
+      ],
+      "capabilities": "None",
+      "defaultApiVersion": "2021-03-01",
+      "locationMappings": null,
+      "locations": [
+        "USGov Texas",
+        "USGov Arizona",
+        "USGov Virginia"
+      ],
+      "properties": null,
+      "resourceType": "locations/cloudServiceOsVersions",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": null,
+      "apiVersions": [
+        "2024-11-04",
+        "2022-09-04",
+        "2022-04-04",
+        "2021-03-01"
+      ],
+      "capabilities": "None",
+      "defaultApiVersion": "2021-03-01",
+      "locationMappings": null,
+      "locations": [
+        "USGov Texas",
+        "USGov Arizona",
+        "USGov Virginia"
+      ],
+      "properties": null,
+      "resourceType": "locations/cloudServiceOsFamilies",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": null,
+      "apiVersions": [
+        "2021-03-01",
+        "2020-10-01-preview"
+      ],
+      "capabilities": "None",
+      "defaultApiVersion": null,
+      "locationMappings": null,
+      "locations": [
+        "USGov Texas",
+        "USGov Arizona",
+        "USGov Virginia"
+      ],
+      "properties": null,
+      "resourceType": "cloudServices/networkInterfaces",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": null,
+      "apiVersions": [
+        "2021-03-01",
+        "2020-10-01-preview"
+      ],
+      "capabilities": "None",
+      "defaultApiVersion": null,
+      "locationMappings": null,
+      "locations": [
+        "USGov Texas",
+        "USGov Arizona",
+        "USGov Virginia"
+      ],
+      "properties": null,
+      "resourceType": "cloudServices/roleInstances/networkInterfaces",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": null,
+      "apiVersions": [
+        "2021-03-01",
+        "2020-10-01-preview"
+      ],
+      "capabilities": "None",
+      "defaultApiVersion": null,
+      "locationMappings": null,
+      "locations": [
+        "USGov Texas",
+        "USGov Arizona",
+        "USGov Virginia"
+      ],
+      "properties": null,
+      "resourceType": "cloudServices/publicIPAddresses",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": [
+        {
+          "apiVersion": "2016-03-30",
+          "profileVersion": "2017-03-09-profile"
+        },
+        {
+          "apiVersion": "2017-03-30",
+          "profileVersion": "2018-03-01-hybrid"
+        },
+        {
+          "apiVersion": "2017-12-01",
+          "profileVersion": "2018-06-01-profile"
+        },
+        {
+          "apiVersion": "2017-12-01",
+          "profileVersion": "2019-03-01-hybrid"
+        },
+        {
+          "apiVersion": "2020-06-01",
+          "profileVersion": "2020-09-01-hybrid"
+        }
+      ],
+      "apiVersions": [
+        "2025-04-01",
+        "2024-11-01",
+        "2024-07-01",
+        "2024-03-01",
+        "2023-09-01",
+        "2023-07-01",
+        "2023-03-01",
+        "2022-11-01",
+        "2022-08-01",
+        "2022-03-01",
+        "2021-11-01",
+        "2021-07-01",
+        "2021-04-01",
+        "2021-03-01",
+        "2020-12-01",
+        "2020-06-01",
+        "2019-12-01",
+        "2019-07-01",
+        "2019-03-01",
+        "2018-10-01",
+        "2018-06-01",
+        "2018-04-01",
+        "2017-12-01",
+        "2017-03-30",
+        "2016-08-30",
+        "2016-04-30-preview",
+        "2016-03-30",
+        "2015-06-15",
+        "2015-05-01-preview"
+      ],
+      "capabilities": "None",
+      "defaultApiVersion": "2023-09-01",
+      "locationMappings": null,
+      "locations": [
+        "USGov Virginia",
+        "USGov Texas",
+        "USGov Arizona"
+      ],
+      "properties": null,
+      "resourceType": "locations/usages",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": [
+        {
+          "apiVersion": "2017-03-30",
+          "profileVersion": "2018-03-01-hybrid"
+        },
+        {
+          "apiVersion": "2018-04-01",
+          "profileVersion": "2018-06-01-profile"
+        }
+      ],
+      "apiVersions": [
+        "2025-04-01",
+        "2024-11-01",
+        "2024-07-01",
+        "2024-03-01",
+        "2023-09-01",
+        "2023-07-01",
+        "2023-03-01",
+        "2022-11-01",
+        "2022-08-01",
+        "2022-03-01",
+        "2021-11-01",
+        "2021-07-01",
+        "2021-04-01",
+        "2021-03-01",
+        "2020-12-01",
+        "2020-06-01",
+        "2019-12-01",
+        "2019-07-01",
+        "2019-03-01",
+        "2018-10-01",
+        "2018-06-01",
+        "2018-04-01",
+        "2017-12-01",
+        "2017-03-30",
+        "2016-08-30",
+        "2016-04-30-preview"
+      ],
+      "capabilities": "CrossResourceGroupResourceMove, CrossSubscriptionResourceMove, SupportsTags, SupportsLocation",
+      "defaultApiVersion": "2023-09-01",
+      "locationMappings": null,
+      "locations": [
+        "USGov Texas",
+        "USGov Arizona",
+        "USGov Virginia"
+      ],
+      "properties": null,
+      "resourceType": "images",
+      "zoneMappings": null
+    },
+    {
+      "aliases": null,
+      "apiProfiles": null,
+      "apiVersions": [
+        "2025-04-01",
+        "2024-11-01",
+        "2024-07-01",
+        "2024-03-01",
+        "2023-09-01",
+        "2023-07-01",
+        "2023-03-01",
+        "2022-11-01",
+        "2022-08-01",
+        "2022-03-01",
+        "2021-11-01",
+        "2021-07-01",
+        "2021-04-01",
+        "2021-03-01",
+        "2020-12-01",
+        "2020-06-01",
+        "2019-12-01",
+        "2019-07-01",
+        "2019-03-01",
+        "2018-10-01"
+      ],
+      "capabilities": "SupportsTags, SupportsLocation",
+      "defaultApiVersion": "2023-09-01",
+      "locationMappings": null,
+      "locations": [
+        "USGov Virginia",
+        "USGov Texas",
+        "USGov Arizona"
+      ],
+      "properties": null,
+      "resourceType": "hostGroups",
+      "zoneMappings": [
+        {
+          "location": "USGov Virginia",
+          "zones": [
+            "2",
+            "3",
+            "1"
+          ]
+        }
+      ]
+    },
+    {
+      "aliases": null,
+      "apiProfiles": null,
+      "apiVersions": [
+        "2025-04-01",
+        "2024-11-01",
+        "2024-07-01",
+        "2024-03-01",
+        "2023-09-01",
+        "2023-07-01",
+        "2023-03-01",
+        "2022-11-01",
+        "2022-08-01",
+        "2022-03-01",
+        "2021-11-01",
+        "2021-07-01",
+        "2021-04-01",
+        "2021-03-01",
+        "2020-12-01",
+        "2020-06-01",
+        "2019-12-01",
+        "2019-07-01",
+        "2019-03-01",
+        "2018-10-01"
+      ],
+      "capabilities": "SupportsTags, SupportsLocation",
+      "defaultApiVersion": "2023-09-01",
+      "locationMappings": null,
+      "locations": [
+        "USGov Virginia",
+        "USGov Texas",
+        "USGov Arizona"
+      ],
+      "properties": null,
+      "resourceType": "hostGroups/hosts",
+      "zoneMappings": [
+        {
+          "location": "USGov Virginia",
+          "zones": [
+            "2",
+            "3",
+            "1"
+          ]
+        }
+      ]
+    },
+    {
+      "aliases": null,
+      "apiProfiles": null,
+      "apiVersions": [
+        "2025-04-01",
+        "2024-11-01",
+        "2024-07-01",
+        "2024-03-01",
+        "2023-09-01",
+        "2023-07-01",
+        "2023-03-01",
+        "2022-11-01",
+        "2022-08-01",
+        "2022-03-01",
+        "2021-11-01",
+        "2021-07-01",
+        "2021-04-01",
+        "2021-03-01",
+        "2020-12-01",
+        "2020-06-01",
+        "2019-12-01",
+        "2019-07-01",
+        "2019-03-01",
+        "2018-10-01",
+        "2018-06-01",
+        "2018-04-01",
+        "2017-12-01"
+      ],
+      "capabilities": "None",
+      "defaultApiVersion": null,
+      "locationMappings": null,
+      "locations": [
+        "USGov Virginia",
+        "USGov Texas",
+        "USGov Arizona"
+      ],
+      "properties": null,
+      "resourceType": "locations/logAnalytics",
+      "zoneMappings": null
+    }
+  ]
+}
