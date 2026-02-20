@@ -86,6 +86,15 @@ def main():
 
     # The Foundry docs pattern: get an OpenAI-compatible client
     openai_client = project_client.get_openai_client()
+    
+    
+    print("DEBUG project_endpoint:", project_endpoint)
+
+    # The OpenAI SDK stores the base URL here
+    try:
+        print("DEBUG openai base_url:", openai_client.base_url)
+    except Exception as e:
+        print("DEBUG could not read openai_client.base_url:", repr(e))
 
     # State so we reuse the same vector store
     state = load_state()
