@@ -68,6 +68,7 @@ jobs:
                 VECTOR_STORE_NAME: azure-parity-output
                 OPENAI_API_VERSION: "2024-05-01-preview"
               run: |
+                python -m pip install --upgrade pip
                 python -m pip install -r requirements.txt
                 python -c "import os; print('OPENAI_API_VERSION=', os.getenv('OPENAI_API_VERSION'))"
                 echo "FOUNDRY_PROJECT_ENDPOINT=${{ secrets.FOUNDRY_PROJECT_ENDPOINT }}"
