@@ -68,8 +68,8 @@ jobs:
                 OPENAI_API_VERSION: "2024-05-01-preview"
               run: |
                 python -m pip install --upgrade pip
-                python -m pip install -r requirements.txt
-                python -c "import os; print('OPENAI_API_VERSION=', os.getenv('OPENAI_API_VERSION'))"
+                pip install --upgrade --pre -r requirements.txt
+                python -c "import importlib.metadata as m; print('azure-ai-projects', m.version('azure-ai-projects'))"
                 python tools/publish_to_vector_store.py
                 echo "VECTOR_STORE_ID(after publish)=$VECTOR_STORE_ID"
             - name: Create/Update Foundry agent
