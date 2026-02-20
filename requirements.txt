@@ -1,4 +1,5 @@
 azure-ai-projects
 azure-identity
 python-dotenv
+openai
 requests
