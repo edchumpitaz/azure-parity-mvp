@@ -51,7 +51,10 @@ jobs:
             - name: Generate markdown report (if diff exists)
               run: |
                   if [ -f "output/Microsoft.Compute.parity.json" ]; then
-                    python3 scripts/report_parity_md.py output/Microsoft.Compute.parity.json output/Microsoft.Compute.parity.md
+                    python3 scripts/report_parity_md.py \
+                      --parity-json output/Microsoft.Compute.parity.json \
+                      --out-md output/Microsoft.Compute.parity.md \
+                      --out-csv output/Microsoft.Compute.parity.csv
                   else
                     echo "No parity diff JSON found; skipping markdown report."
                   fi
