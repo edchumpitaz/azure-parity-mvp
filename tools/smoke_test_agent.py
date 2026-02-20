@@ -59,7 +59,7 @@ def main():
     project_client = AIProjectClient(endpoint=project_endpoint, credential=credential)
 
     # OpenAI-compatible client bound to Foundry project
-    openai_client = project_client.get_openai_client(api_version=os.getenv("OPENAI_API_VERSION", "2024-05-01-preview"))
+    openai_client = project_client.get_openai_client()
 
     print("Vector store:", vector_store_id)
     print("Model deployment:", model_deployment)
