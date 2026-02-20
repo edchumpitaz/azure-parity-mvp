@@ -84,6 +84,7 @@ jobs:
             - name: Smoke test agent Q&A
               env:
                 FOUNDRY_PROJECT_ENDPOINT: ${{ secrets.FOUNDRY_PROJECT_ENDPOINT }}
+                MODEL_DEPLOYMENT_NAME: ${{ secrets.MODEL_DEPLOYMENT_NAME }}
                 OPENAI_API_VERSION: "2024-05-01-preview"
               run: |
                 python tools/smoke_test_agent.py
