@@ -77,6 +77,7 @@ jobs:
                 FOUNDRY_PROJECT_ENDPOINT: ${{ secrets.FOUNDRY_PROJECT_ENDPOINT }}
                 MODEL_DEPLOYMENT_NAME: ${{ secrets.MODEL_DEPLOYMENT_NAME }}
                 OPENAI_API_VERSION: "2024-05-01-preview"
+                FOUNDRY_AGENT_NAME: "azure-api-parity-agent"
               run: |
                 echo "VECTOR_STORE_ID=$VECTOR_STORE_ID"
                 python tools/create_agent.py

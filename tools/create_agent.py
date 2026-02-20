@@ -3,13 +3,12 @@ import json
 from pathlib import Path
 
 from azure.ai.projects import AIProjectClient
+from azure.ai.projects.models import FileSearchTool, PromptAgentDefinition
 from azure.identity import DefaultAzureCredential
-from azure.ai.agents.models import FileSearchTool
 
 STATE_DIR = Path(".foundry")
 STATE_DIR.mkdir(exist_ok=True)
 
-VECTOR_STORE_STATE_FILE = STATE_DIR / "vector_store.json"
 AGENT_STATE_FILE = STATE_DIR / "agent.json"
 
 
@@ -32,20 +31,18 @@ def main():
     if not model_deployment:
         raise ValueError("Missing env var: MODEL_DEPLOYMENT_NAME (string)")
 
+    # Must match what you used for vector stores
     openai_api_version = os.getenv("OPENAI_API_VERSION", "2024-05-01-preview")
 
-    # Prefer VECTOR_STORE_ID from GitHub Actions; fallback to local state
+    # This is exported by publish_to_vector_store.py via GITHUB_ENV
     vector_store_id = os.getenv("VECTOR_STORE_ID")
-
-    if not vector_store_id:
-        vs_state = load_json(VECTOR_STORE_STATE_FILE)
-        vector_store_id = vs_state.get("vector_store_id")
-
     if not vector_store_id:
         raise ValueError(
-            "Vector store id not found. Ensure publish_to_vector_store.py "
-            "ran successfully and exported VECTOR_STORE_ID."
+            "Missing env var: VECTOR_STORE_ID (string). "
+            "Ensure publish_to_vector_store.py ran and exported it in the same job."
         )
+
+    agent_name = os.getenv("FOUNDRY_AGENT_NAME", "azure-api-parity-agent")
 
     instructions = """You are the Azure ARM API Parity Analyst for Azure Public vs Azure US Government.
 
@@ -62,32 +59,44 @@ Answer format:
 - For “largest gap/top N” questions: rely on lagDays and missing counts from retrieved artifacts; if not available, explain the limitation and cite what you used.
 """
 
+    # If we already created a version this run or earlier, we can reuse it
+    state = load_json(AGENT_STATE_FILE)
+    existing_name = state.get("agent_name")
+    existing_version = state.get("version")
+
     credential = DefaultAzureCredential()
     project_client = AIProjectClient(endpoint=project_endpoint, credential=credential)
 
-    agents_client = project_client.agents
+    # Create a new agent version (idempotent strategy: reuse if already recorded locally)
+    if existing_name == agent_name and existing_version:
+        print(f"Reusing existing agent version from state: {agent_name} v{existing_version}")
+        print("Vector store:", vector_store_id)
+        print("Model deployment:", model_deployment)
+        print("OPENAI_API_VERSION:", openai_api_version)
+        return
 
-    # Reuse if already created
-    agent_state = load_json(AGENT_STATE_FILE)
-    agent_id = agent_state.get("agent_id")
+    definition = PromptAgentDefinition(
+        model=model_deployment,
+        instructions=instructions,
+        tools=[FileSearchTool(vector_store_ids=[vector_store_id])],
+    )
 
-    if not agent_id:
-        file_search_tool = FileSearchTool(vector_store_ids=[vector_store_id])
+    agent_version = project_client.agents.create_version(
+        agent_name=agent_name,
+        definition=definition,
+        description="Azure ARM API parity agent (file search over parity outputs).",
+    )
 
-        agent = agents_client.create_agent(
-            model=model_deployment,
-            name="azure-api-parity-agent",
-            instructions=instructions,
-            tools=file_search_tool.definitions,
-            tool_resources=file_search_tool.resources,
-        )
+    save_json(
+        AGENT_STATE_FILE,
+        {
+            "agent_id": agent_version.id,
+            "agent_name": agent_version.name,
+            "version": agent_version.version,
+        },
+    )
 
-        agent_id = agent.id
-        save_json(AGENT_STATE_FILE, {"agent_id": agent_id})
-        print(f"✅ Created agent: {agent_id}")
-    else:
-        print(f"Reusing existing agent_id from state: {agent_id}")
-
+    print(f"✅ Agent created (id: {agent_version.id}, name: {agent_version.name}, version: {agent_version.version})")
     print("Vector store:", vector_store_id)
     print("Model deployment:", model_deployment)
     print("OPENAI_API_VERSION:", openai_api_version)
