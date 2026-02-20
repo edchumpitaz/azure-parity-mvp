@@ -70,7 +70,6 @@ jobs:
                 python -m pip install --upgrade pip
                 python -m pip install -r requirements.txt
                 python -c "import os; print('OPENAI_API_VERSION=', os.getenv('OPENAI_API_VERSION'))"
-                echo "FOUNDRY_PROJECT_ENDPOINT=${{ secrets.FOUNDRY_PROJECT_ENDPOINT }}"
                 python tools/publish_to_vector_store.py
                 echo "VECTOR_STORE_ID(after publish)=$VECTOR_STORE_ID"
             - name: Create/Update Foundry agent
