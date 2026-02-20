@@ -34,12 +34,17 @@ def main():
 
     openai_api_version = os.getenv("OPENAI_API_VERSION", "2024-05-01-preview")
 
-    vs_state = load_json(VECTOR_STORE_STATE_FILE)
-    vector_store_id = vs_state.get("vector_store_id")
+    # Prefer VECTOR_STORE_ID from GitHub Actions; fallback to local state
+    vector_store_id = os.getenv("VECTOR_STORE_ID")
+
+    if not vector_store_id:
+        vs_state = load_json(VECTOR_STORE_STATE_FILE)
+        vector_store_id = vs_state.get("vector_store_id")
+
     if not vector_store_id:
         raise ValueError(
-            f"Missing vector_store_id in {VECTOR_STORE_STATE_FILE}. "
-            "Run publish_to_vector_store.py first."
+            "Vector store id not found. Ensure publish_to_vector_store.py "
+            "ran successfully and exported VECTOR_STORE_ID."
         )
 
     instructions = """You are the Azure ARM API Parity Analyst for Azure Public vs Azure US Government.
@@ -60,7 +65,6 @@ Answer format:
     credential = DefaultAzureCredential()
     project_client = AIProjectClient(endpoint=project_endpoint, credential=credential)
 
-    # Create agent with File Search bound to the vector store
     agents_client = project_client.agents
 
     # Reuse if already created

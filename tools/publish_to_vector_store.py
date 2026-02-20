@@ -138,7 +138,13 @@ def main():
     print("✅ Vector store updated successfully.")
     print(f"Vector store id: {vector_store_id}")
     print(f"State written to: {VECTOR_STORE_STATE_FILE}")
-
+    
+     # GitHub Actions: export VECTOR_STORE_ID for subsequent steps
+    github_env = os.getenv("GITHUB_ENV")
+    if github_env:
+        with open(github_env, "a", encoding="utf-8") as f:
+            f.write(f"VECTOR_STORE_ID={vector_store_id}\n")
+        print("✅ Exported VECTOR_STORE_ID to GitHub Actions env")
 
 if __name__ == "__main__":
     main()
