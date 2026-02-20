@@ -1,6 +1,4 @@
-@'
 azure-ai-projects
 azure-identity
 python-dotenv
 requests
-'@ | Set-Content -Encoding utf8 requirements.txt
