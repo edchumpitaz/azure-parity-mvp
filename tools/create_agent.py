@@ -4,7 +4,6 @@ from pathlib import Path
 
 from azure.ai.projects import AIProjectClient
 from azure.identity import DefaultAzureCredential
-from azure.ai.agents.models import FileSearchTool
 
 STATE_DIR = Path(".foundry")
 STATE_DIR.mkdir(exist_ok=True)
@@ -72,8 +71,12 @@ Answer format:
             model=model_deployment,
             name="azure-api-parity-agent",
             instructions=instructions,
-            tools=[FileSearchTool(vector_store_ids=[vector_store_id])],
-            # pass api version through openai-compatible stack via env var
+            tools=[{"type": "file_search"}],
+            tool_resources={
+                "file_search": {
+                    "vector_store_ids": [vector_store_id]
+                }
+            },
         )
         agent_id = agent.id
         save_json(AGENT_STATE_FILE, {"agent_id": agent_id})
