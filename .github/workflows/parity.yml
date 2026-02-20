@@ -74,6 +74,16 @@ jobs:
                 echo "FOUNDRY_PROJECT_ENDPOINT=${{ secrets.FOUNDRY_PROJECT_ENDPOINT }}"
                 python tools/publish_to_vector_store.py
 
+
+
+            - name: Create/Update Foundry agent
+              env:
+                FOUNDRY_PROJECT_ENDPOINT: ${{ secrets.FOUNDRY_PROJECT_ENDPOINT }}
+                MODEL_DEPLOYMENT_NAME: ${{ secrets.MODEL_DEPLOYMENT_NAME }}
+                OPENAI_API_VERSION: "2024-05-01-preview"
+              run: |
+                python tools/create_agent.py
+
             - name: Upload artifacts
               uses: actions/upload-artifact@v4
               with:
