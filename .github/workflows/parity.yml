@@ -55,6 +55,15 @@ jobs:
                   else
                     echo "No parity diff JSON found; skipping markdown report."
                   fi
+
+            - name: Publish parity artifacts to Foundry vector store
+              env:
+                FOUNDRY_PROJECT_ENDPOINT: ${{ secrets.FOUNDRY_PROJECT_ENDPOINT }}
+                VECTOR_STORE_NAME: azure-parity-output
+              run: |
+                python -m pip install -r requirements.txt
+                python tools/publish_to_vector_store.py
+
             - name: Upload artifacts
               uses: actions/upload-artifact@v4
               with:
