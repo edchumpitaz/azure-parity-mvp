@@ -10,6 +10,8 @@ AGENT_STATE_FILE = STATE_DIR / "agent.json"
 
 
 def load_json(path: Path) -> dict:
+    if not path.exists():
+        raise FileNotFoundError(f"Missing {path}. Run create_agent.py first.")
     return json.loads(path.read_text(encoding="utf-8"))
 
 
@@ -18,32 +20,48 @@ def main():
     if not project_endpoint:
         raise ValueError("Missing env var: FOUNDRY_PROJECT_ENDPOINT (string)")
 
-    agent_id = load_json(AGENT_STATE_FILE).get("agent_id")
+    state = load_json(AGENT_STATE_FILE)
+    agent_id = state.get("agent_id")
+    agent_name = state.get("agent_name")
+    agent_version = state.get("version")
+
     if not agent_id:
-        raise ValueError("Missing agent_id in .foundry/agent.json. Run create_agent.py first.")
+        raise ValueError("Missing agent_id in .foundry/agent.json")
+
+    question = "What is the lag for virtualMachines? Answer only using parity outputs and cite sources."
 
     credential = DefaultAzureCredential()
     project_client = AIProjectClient(endpoint=project_endpoint, credential=credential)
-    agents_client = project_client.agents
 
-    # Create a thread, ask a question, run the agent, print output
-    thread = agents_client.create_thread()
+    # Projects agent runtime (no threads). Method names can vary by prerelease.
+    # Try the most common runtime entrypoints.
+    agents = project_client.agents
 
-    question = "What is the lag for virtualMachines? Answer only using parity outputs and cite sources."
-    agents_client.create_message(thread_id=thread.id, role="user", content=question)
+    print(f"Using agent: id={agent_id}, name={agent_name}, version={agent_version}")
+    print("Question:", question)
 
-    run = agents_client.create_and_process_run(thread_id=thread.id, agent_id=agent_id)
+    # Attempt 1: invoke by agent_id (most common)
+    if hasattr(agents, "invoke"):
+        result = agents.invoke(agent_id=agent_id, input=question)
+        print("----- ASSISTANT RESPONSE -----")
+        print(result.output if hasattr(result, "output") else result)
+        return
 
-    if run.status != "completed":
-        raise RuntimeError(f"Run not completed. status={run.status}")
+    # Attempt 2: run by agent name/version
+    if hasattr(agents, "run"):
+        result = agents.run(agent_name=agent_name, version=agent_version, input=question)
+        print("----- ASSISTANT RESPONSE -----")
+        print(result.output if hasattr(result, "output") else result)
+        return
 
-    messages = agents_client.list_messages(thread_id=thread.id)
-    # Print latest assistant message
-    for m in messages.data:
-        if m.role == "assistant":
-            print("----- ASSISTANT RESPONSE -----")
-            print(m.content[0].text.value if m.content else "")
-            break
+    print([m for m in dir(agents) if "run" in m or "invoke" in m or "chat" in m or "conversation" in m])
+
+    # If neither exists, fail with a helpful message
+    raise AttributeError(
+        "Could not find an agent runtime method. "
+        "Expected agents.invoke(...) or agents.run(...). "
+        "Print available methods and adjust to your installed azure-ai-projects version."
+    )
 
 
 if __name__ == "__main__":
