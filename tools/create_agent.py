@@ -4,6 +4,7 @@ from pathlib import Path
 
 from azure.ai.projects import AIProjectClient
 from azure.identity import DefaultAzureCredential
+from azure.ai.agents.models import FileSearchTool
 
 STATE_DIR = Path(".foundry")
 STATE_DIR.mkdir(exist_ok=True)
@@ -67,17 +68,16 @@ Answer format:
     agent_id = agent_state.get("agent_id")
 
     if not agent_id:
+        file_search_tool = FileSearchTool(vector_store_ids=[vector_store_id])
+
         agent = agents_client.create_agent(
             model=model_deployment,
             name="azure-api-parity-agent",
             instructions=instructions,
-            tools=[{"type": "file_search"}],
-            tool_resources={
-                "file_search": {
-                    "vector_store_ids": [vector_store_id]
-                }
-            },
+            tools=file_search_tool.definitions,
+            tool_resources=file_search_tool.resources,
         )
+
         agent_id = agent.id
         save_json(AGENT_STATE_FILE, {"agent_id": agent_id})
         print(f"✅ Created agent: {agent_id}")
