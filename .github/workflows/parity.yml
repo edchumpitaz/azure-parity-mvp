@@ -84,6 +84,14 @@ jobs:
               run: |
                 python tools/create_agent.py
 
+
+            - name: Smoke test agent Q&A
+              env:
+                FOUNDRY_PROJECT_ENDPOINT: ${{ secrets.FOUNDRY_PROJECT_ENDPOINT }}
+                OPENAI_API_VERSION: "2024-05-01-preview"
+              run: |
+                python tools/smoke_test_agent.py
+
             - name: Upload artifacts
               uses: actions/upload-artifact@v4
               with:
